@@ -11,13 +11,14 @@ function loadReviews() {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${r.movie}</td>
-      <td>${r.genre}</td>
       <td>${r.cat1}</td>
       <td>${r.cat2}</td>
       <td>${r.cat3}</td>
       <td>${r.cat4}</td>
       <td>${r.cat5}</td>
+      <td>${r.cat6}</td>
       <td><b>${r.average}</b></td>
+      <td>${r.recommend}</td>
       <td><button data-movie="${r.movie}" onclick="deleteReview(this)">Delete</button></td>
     `;
     table.appendChild(row);
