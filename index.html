@@ -12,15 +12,17 @@
       <input type="text" id="movieName" required>
     </label><br><br>
 
-    <label>Genre:
-      <input type="text" id="genre" required>
-    </label><br><br>
-
-    <label>Story (1-10): <input type="number" id="cat1" min="1" max="10" required></label><br>
+    <label>Underholdningsgrad (1-10): <input type="number" id="cat1" min="1" max="10" required></label><br>
     <label>Acting (1-10): <input type="number" id="cat2" min="1" max="10" required></label><br>
-    <label>Cinematography (1-10): <input type="number" id="cat3" min="1" max="10" required></label><br>
-    <label>Sound (1-10): <input type="number" id="cat4" min="1" max="10" required></label><br>
-    <label>Entertainment (1-10): <input type="number" id="cat5" min="1" max="10" required></label><br><br>
+    <label>Toilet-FOMO (1-10): <input type="number" id="cat3" min="1" max="10" required></label><br>
+    <label>Predictability (1-10): <input type="number" id="cat4" min="1" max="10" required></label><br>
+    <label>Genre faktor (1-10): <input type="number" id="cat5" min="1" max="10" required></label><br>
+    <label>Rewatchability (1-10): <input type="number" id="cat6" min="1" max="10" required></label><br><br>
+
+    <label>Anbefalingsgrad: 
+      <input type="radio" name="recommend" value="Ja" required> Ja
+      <input type="radio" name="recommend" value="Nej"> Nej
+    </label><br><br>
 
     <button type="submit">Save Review</button>
   </form>
