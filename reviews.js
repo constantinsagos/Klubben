@@ -5,13 +5,13 @@ function loadReviews() {
   reviews.sort((a, b) => b.average - a.average);
 
   const table = document.getElementById("reviewsTable");
-  table.innerHTML = ""; // Clear table before repopulating
+  table.innerHTML = "";
 
   reviews.forEach((r) => {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${r.movie}</td>
-      <td>${r.genre}</td> <!-- NEW -->
+      <td>${r.genre}</td>
       <td>${r.cat1}</td>
       <td>${r.cat2}</td>
       <td>${r.cat3}</td>
@@ -32,8 +32,8 @@ function deleteReview(button) {
   reviews = reviews.filter(r => r.movie !== movieName);
 
   localStorage.setItem("reviews", JSON.stringify(reviews));
-  loadReviews(); // Refresh table
+  loadReviews();
 }
 
-// Load reviews when page opens
+// Load reviews on page load
 loadReviews();
