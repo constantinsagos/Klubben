@@ -25,10 +25,10 @@ function loadReviews() {
 
 function deleteReview(index) {
   let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-  reviews.splice(index, 1); // Remove review
+  reviews.splice(index, 1); // Remove review at index
   localStorage.setItem("reviews", JSON.stringify(reviews));
   loadReviews(); // Refresh table
 }
 
-// Load reviews when page opens
+// Load reviews when page loads
 loadReviews();
