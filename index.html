@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Review - Add</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Add a Movie Review</h1>
+  <form id="reviewForm">
+    <label>Movie Name:
+      <input type="text" id="movieName" required>
+    </label><br><br>
+
+    <label>Story (1-10): <input type="number" id="cat1" min="1" max="10" required></label><br>
+    <label>Acting (1-10): <input type="number" id="cat2" min="1" max="10" required></label><br>
+    <label>Cinematography (1-10): <input type="number" id="cat3" min="1" max="10" required></label><br>
+    <label>Sound (1-10): <input type="number" id="cat4" min="1" max="10" required></label><br>
+    <label>Entertainment (1-10): <input type="number" id="cat5" min="1" max="10" required></label><br><br>
+
+    <button type="submit">Save Review</button>
+  </form>
+
+  <p><a href="reviews.html">Go to Reviews Overview</a></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
