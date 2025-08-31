@@ -1,7 +1,6 @@
 function loadReviews() {
   let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 
-  // Sort by average (highest first)
   reviews.sort((a, b) => b.average - a.average);
 
   const table = document.getElementById("reviewsTable");
@@ -11,7 +10,7 @@ function loadReviews() {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${r.movie}</td>
-      <td>${r.genre}</td>
+      <td>${r.genre}</td> <!-- ✅ SHOW TEXT -->
       <td>${r.cat1}</td>
       <td>${r.cat2}</td>
       <td>${r.cat3}</td>
@@ -30,12 +29,10 @@ function deleteReview(button) {
   const movieName = button.getAttribute("data-movie");
   let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 
-  // Remove the first matching movie
   reviews = reviews.filter(r => r.movie !== movieName);
 
   localStorage.setItem("reviews", JSON.stringify(reviews));
   loadReviews();
 }
 
-// Load reviews on page load
 loadReviews();
