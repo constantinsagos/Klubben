@@ -10,7 +10,7 @@ function loadReviews() {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${r.movie}</td>
-      <td>${r.genre}</td> <!-- ✅ SHOW TEXT -->
+      <td>${r.genre || "-"}</td> 
       <td>${r.cat1}</td>
       <td>${r.cat2}</td>
       <td>${r.cat3}</td>
@@ -28,9 +28,7 @@ function loadReviews() {
 function deleteReview(button) {
   const movieName = button.getAttribute("data-movie");
   let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
   reviews = reviews.filter(r => r.movie !== movieName);
-
   localStorage.setItem("reviews", JSON.stringify(reviews));
   loadReviews();
 }
