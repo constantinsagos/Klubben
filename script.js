@@ -1,8 +1,8 @@
 document.getElementById("reviewForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const movie = document.getElementById("movieName").value;
-  const genre = document.getElementById("genre").value; // NEW
+  const movie = document.getElementById("movieName").value.trim();
+  const genre = document.getElementById("genre").value.trim();
   const cat1 = parseInt(document.getElementById("cat1").value);
   const cat2 = parseInt(document.getElementById("cat2").value);
   const cat3 = parseInt(document.getElementById("cat3").value);
@@ -13,7 +13,7 @@ document.getElementById("reviewForm").addEventListener("submit", function(e) {
 
   const review = {
     movie,
-    genre, // NEW
+    genre,
     cat1,
     cat2,
     cat3,
