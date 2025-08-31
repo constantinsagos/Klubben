@@ -11,6 +11,7 @@ function loadReviews() {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${r.movie}</td>
+      <td>${r.genre}</td>
       <td>${r.cat1}</td>
       <td>${r.cat2}</td>
       <td>${r.cat3}</td>
